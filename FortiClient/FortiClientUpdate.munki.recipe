@@ -9,7 +9,7 @@
 		<key>Input</key>
 		<dict>
 				<key>NAME</key>
-				<string>GoogleChrome</string>
+				<string>FortiClient</string>
 				<key>MUNKI_REPO_SUBDIR</key>
 				<string>apps</string>
 				<key>pkginfo</key>
