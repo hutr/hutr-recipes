@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict/>
 	<key>MinimumVersion</key>
-	<string>5.6.0.703</string>
+	<string>0.4.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.hutr.download.FortiClientUpdate</string>
 	<key>Process</key>

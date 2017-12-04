@@ -14,7 +14,7 @@
 		<string>https://storage.googleapis.com/munki-forticlient/FortiClient.mpkg</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>5.6.0.703</string>
+	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 			<dict>
