@@ -1,1 +1,1 @@
-# FortiClient
+# Autopkg recipes
