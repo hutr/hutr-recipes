@@ -34,7 +34,6 @@
 						<string>removepackages</string>
 						<key>uninstallable</key>
 						<false/>
-
 						<key>items_to_copy</key>
 						<array/>
 						<key>minimum_os_version</key>
@@ -43,12 +42,10 @@
 						<string>FortiClient</string>
 						<key>receipts</key>
 						<array/>
-
 						<key>update_for</key>
 						<array>
 							<string>FortiClient</string>
 						</array>
-
         </dict>
     </dict>
 
@@ -56,34 +53,28 @@
 	<string>0.2.0</string>
   <key>ParentRecipe</key>
 	<string>com.github.hutr.download.FortiClientUpdate</string>
-  <key>Process</key>
-  <array>
-      <dict>
-          <key>Arguments</key>
-          <dict>
-              <key>additional_pkginfo</key>
-              <dict>
-                  <key>installs</key>
-                  <array>
-                      <dict>
-													<key>CFBundleIdentifier</key>
-													<string>com.fortinet.FortiClient</string>
-													<key>CFBundleName</key>
-													<string>FortiClient</string>
-													<key>CFBundleShortVersionString</key>
-													<string>%version%</string>
-													<key>minosversion</key>
-										      <string>10.9</string>
-													<key>path</key>
-													<string>/Applications/FortiClient.app</string>
-													<key>type</key>
-													<string>application</string>
-													<key>version_comparison_key</key>
-													<string>CFBundleShortVersionString</string>
-                      </dict>
-                  </array>
-              </dict>
-          </dict>
+	<key>Process</key>
+	<array>
+			<dict>
+					<key>Arguments</key>
+					<dict>
+							<key>input_plist_path</key>
+							<string>%pathname%/FortiClient.app/Contents/Info.plist</string>
+							<key>plist_version_key</key>
+							<string>CFBundleVersion</string>
+					</dict>
+					<key>Processor</key>
+					<string>Versioner</string>
+			</dict>
+			<dict>
+					<key>Arguments</key>
+					<dict>
+							<key>additional_pkginfo</key>
+							<dict>
+									<key>version</key>
+									<string>%version%</string>
+							</dict>
+					</dict>
 					<key>Processor</key>
 					<string>MunkiPkginfoMerger</string>
 			</dict>
@@ -94,6 +85,8 @@
 							<string>%pathname%</string>
 							<key>repo_subdirectory</key>
 							<string>%MUNKI_REPO_SUBDIR%</string>
+							<key>version_comparison_key</key>
+							<string>CFBundleVersion</string>
 					</dict>
 					<key>Processor</key>
 					<string>MunkiImporter</string>
