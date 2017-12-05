@@ -66,38 +66,38 @@
                   <key>installs</key>
                   <array>
                       <dict>
-                          <key>CFBundleIdentifier</key>
+													<key>CFBundleIdentifier</key>
 													<string>com.fortinet.FortiClient</string>
-                          <key>CFBundleName</key>
+													<key>CFBundleName</key>
 													<string>FortiClient</string>
-                          <key>CFBundleVersion</key>
-                          <string>123.123</string>
+													<key>CFBundleShortVersionString</key>
+													<string>%version%</string>
 													<key>minosversion</key>
 										      <string>10.9</string>
-                          <key>path</key>
+													<key>path</key>
 													<string>/Applications/FortiClient.app</string>
-                          <key>type</key>
-                          <string>application</string>
-                          <key>version_comparison_key</key>
-                          <string>CFBundleVersion</string>
+													<key>type</key>
+													<string>application</string>
+													<key>version_comparison_key</key>
+													<string>CFBundleShortVersionString</string>
                       </dict>
                   </array>
               </dict>
           </dict>
-          <key>Processor</key>
-          <string>MunkiPkginfoMerger</string>
-      </dict>
-      <dict>
-          <key>Arguments</key>
-          <dict>
-              <key>pkg_path</key>
-              <string>%pathname%</string>
-              <key>repo_subdirectory</key>
-              <string>%MUNKI_REPO_SUBDIR%</string>
-          </dict>
-          <key>Processor</key>
-          <string>MunkiImporter</string>
-      </dict>
-  </array>
+					<key>Processor</key>
+					<string>MunkiPkginfoMerger</string>
+			</dict>
+			<dict>
+					<key>Arguments</key>
+					<dict>
+							<key>pkg_path</key>
+							<string>%pathname%</string>
+							<key>repo_subdirectory</key>
+							<string>%MUNKI_REPO_SUBDIR%</string>
+					</dict>
+					<key>Processor</key>
+					<string>MunkiImporter</string>
+			</dict>
+	</array>
 </dict>
 </plist>
