@@ -2,16 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Comment</key>
+	<string>Created with Recipe Robot v1.0.3 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of RocketChat.</string>
+	<string>Downloads the latest version of Recipe Robot and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.hutr.munki.RocketChat</string>
+	<string>com.github.hutr.munki.RecipeRobot</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>RocketChat</string>
+		<string>Recipe Robot</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -19,11 +21,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>The Ultimate Open Source WebChat Platform.</string>
+			<string>A kick ass tool for creating AutoPkg recipes.</string>
 			<key>developer</key>
-			<string>Rocket.Chat</string>
+			<string>Elliot Jordan</string>
 			<key>display_name</key>
-			<string>Rocket.Chat</string>
+			<string>Recipe Robot</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -31,9 +33,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.5.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RocketChat</string>
+	<string>com.github.hutr.download.RecipeRobot</string>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -3,20 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>Comment</key>
-	<string>Git repo: https://github.com/RocketChat/Rocket.Chat.Electron</string>
+	<string>Created with Recipe Robot v1.0.3 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Rocket.Chat Desktop App for Mac OSX.</string>
+	<string>Downloads the latest version of Recipe Robot and creates a package.</string>
 	<key>Identifier</key>
-	<string>com.github.hutr.pkg.RocketChat</string>
+	<string>com.github.hutr.pkg.RecipeRobot</string>
 	<key>Input</key>
 	<dict>
+		<key>BUNDLE_ID</key>
+		<string>com.elliotjordan.recipe-robot</string>
 		<key>NAME</key>
-		<string>Rocket Chat</string>
+		<string>Recipe Robot</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.5.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RocketChat</string>
+	<string>com.github.hutr.download.RecipeRobot</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -46,9 +48,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/Rocket.Chat.app</string>
+				<string>%pkgroot%/Applications/Recipe Robot.app</string>
 				<key>source_path</key>
-				<string>%pathname%/Rocket.Chat.app</string>
+				<string>%pathname%/Recipe Robot.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
