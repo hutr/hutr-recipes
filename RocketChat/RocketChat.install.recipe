@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Git repo: https://github.com/RocketChat/Rocket.Chat.Electron</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Rocket.Chat Desktop App for Mac OSX.</string>
+	<string>Downloads the latest version of RocketChat.</string>
 	<key>Identifier</key>
-	<string>com.github.homebysix.install.RocketChat</string>
+	<string>com.github.hutr.download.RocketChat</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RocketChat</string>
+	<string>com.github.hutr.download.RecipeRobot</string>
 	<key>Process</key>
 	<array>
 		<dict>
