@@ -2,41 +2,30 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.0.3 (https://github.com/homebysix/recipe-robot)</string>
-	<key>Description</key>
-	<string>Downloads the latest version of RocketChat.</string>
-	<key>Identifier</key>
-	<string>com.github.hutr.download.RocketChat</string>
-	<key>Input</key>
-	<dict>
-		<key>NAME</key>
-		<string>RocketChat</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>0.5.0</string>
-	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RocketChat</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-				<key>items_to_copy</key>
-				<array>
-					<dict>
-						<key>destination_path</key>
-						<string>/Applications</string>
-						<key>source_item</key>
-						<string>Rocket.Chat.app</string>
-					</dict>
-				</array>
-			</dict>
-			<key>Processor</key>
-			<string>InstallFromDMG</string>
-		</dict>
-	</array>
+    <key>Description</key>
+    <string>Downloads the current release version of Rocket.Chat+ and installs it</string>
+    <key>Identifier</key>
+    <string>com.github.hutr.install.RocketChat</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>RocketChat</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.hutr.download.RocketChat</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Installer</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
