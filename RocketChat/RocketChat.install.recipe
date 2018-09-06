@@ -14,7 +14,7 @@
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RecipeRobot</string>
+	<string>com.github.hutr.download.RocketChat</string>
 	<key>Process</key>
 	<array>
 		<dict>
