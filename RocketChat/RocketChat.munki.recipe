@@ -37,6 +37,7 @@
 			<string>removepackages</string>
 			<key>uninstallable</key>
 			<false/>
+
 			<key>items_to_copy</key>
 			<array/>
 			<key>minimum_os_version</key>
@@ -45,6 +46,7 @@
 			<string>Rocket.Chat</string>
 			<key>receipts</key>
 			<array/>
+
 			<key>update_for</key>
 			<array>
 				<string>Rocket.Chat</string>
