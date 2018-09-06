@@ -37,14 +37,6 @@
 			<dict>
 				<key>filename</key>
 				<string>%NAME%-%version%.dmg</string>
-				<key>input_path</key>
-				<string>%pathname%</string>
-				<key>expected_authority_names</key>
-				<array>
-						<string>3rd Party Mac Developer Installer: Rocket.Chat Technologies Corp. (S6UPZG7ZR3)</string>
-						<string>Apple Worldwide Developer Relations Certification Authority</string>
-						<string>Apple Root CA</string>
-				</array>
 			</dict>
 		</dict>
 	</array>
