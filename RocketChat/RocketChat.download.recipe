@@ -2,45 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Git repo: https://github.com/RocketChat/Rocket.Chat.Electron</string>
-	<key>Description</key>
-	<string>Downloads the latest version of Rocket.Chat Desktop App for Mac OSX.</string>
-	<key>Identifier</key>
-	<string>com.github.hutr.download.RocketChat</string>
-	<key>Input</key>
-	<dict>
-		<key>GITHUB_REPO</key>
-		<string>RocketChat/Rocket.Chat.Electron</string>
-		<key>NAME</key>
-		<string>RocketChat</string>
-	</dict>
-	<key>MinimumVersion</key>
-	<string>0.5.0</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>github_repo</key>
-				<string>%GITHUB_REPO%</string>
-			</dict>
-			<key>Processor</key>
-			<string>GitHubReleasesInfoProvider</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>filename</key>
-				<string>%NAME%-%version%.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
-		</dict>
-	</array>
+    <key>Description</key>
+    <string>Downloads the current release version of Rocket.Chat+</string>
+    <key>Identifier</key>
+    <string>com.github.hutr.download.RocketChat</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>RocketChat</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+                <key>github_repo</key>
+                <string>RocketChat/Rocket.Chat.Electron</string>
+                <key>asset_regex</key>
+                <string>.*pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+        <key>Processor</key>
+        <string>CodeSignatureVerifier</string>
+        <key>Arguments</key>
+        <dict>
+            <key>input_path</key>
+            <string>%pathname%</string>
+            <key>expected_authority_names</key>
+            <array>
+                <string>3rd Party Mac Developer Installer: Rocket.Chat Technologies Corp. (S6UPZG7ZR3)</string>
+                <string>Apple Worldwide Developer Relations Certification Authority</string>
+                <string>Apple Root CA</string>
+            </array>
+        </dict>
+    </dict>
+    </array>
 </dict>
 </plist>

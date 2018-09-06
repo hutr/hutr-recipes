@@ -2,86 +2,69 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Git repo: https://github.com/RocketChat/Rocket.Chat.Electron</string>
-	<key>Description</key>
-	<string>Downloads the latest version of Rocket.Chat Desktop App for Mac OSX.</string>
-	<key>Identifier</key>
-	<string>com.github.hutr.munki.RocketChat</string>
-	<key>Input</key>
-	<dict>
-		<key>MUNKI_REPO_SUBDIR</key>
-		<string>apps/%NAME%</string>
-		<key>NAME</key>
-		<string>RocketChat</string>
-		<key>pkginfo</key>
-		<dict>
-			<key>catalogs</key>
-			<array>
-				<string>testing</string>
-			</array>
-			<key>description</key>
-			<string>The Ultimate Open Source WebChat Platform.</string>
-			<key>developer</key>
-			<string>Rocket.Chat</string>
-			<key>display_name</key>
-			<string>Rocket.Chat</string>
-			<key>name</key>
-			<key>category</key>
-			<string>VPN</string>
-			<key>name</key>
-			<string>%NAME%</string>
-			<key>unattended_install</key>
-			<true/>
-			<key>uninstall_method</key>
-			<string>removepackages</string>
-			<key>uninstallable</key>
-			<false/>
-
-			<key>items_to_copy</key>
-			<array/>
-			<key>minimum_os_version</key>
-			<string>10.5.0</string>
-			<key>name</key>
-			<string>Rocket.Chat</string>
-			<key>receipts</key>
-			<array/>
-
-			<key>update_for</key>
-			<array>
-				<string>Rocket.Chat</string>
-			</array>
-
-		</dict>
-	</dict>
-
-
-	<key>MinimumVersion</key>
-	<string>0.5.0</string>
-	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RocketChat</string>
-	<key>Process</key>
-	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
-			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
-		</dict>
-	</array>
+    <key>Description</key>
+    <string>Downloads the current release version of Rocket.Chat+ and imports it into Munki</string>
+    <key>Identifier</key>
+    <string>com.github.hutr.munki.RocketChat</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>RocketChat</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/communication/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Rocket.Chat+ is a RocketChat app for macOS.</string>
+            <key>category</key>
+            <string>Communication</string>
+            <key>developer</key>
+            <string>Rocket.Chat</string>
+            <key>display_name</key>
+            <string>Rocket.Chat+</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>minimum_os_version</key>
+            <string>10.9.0</string>
+            <key>blocking_applications</key>
+            <array>
+                <string>Rocket.Chat+</string>
+            </array>
+            <key>unattended_install</key>
+            <true/>
+            <key>preinstall_script</key>
+            <string>#!/bin/sh
+if [ -e "/Applications/Rocket.Chat+.app" ]; then
+  /bin/rm -rf "/Applications/Rocket.Chat+.app"
+fi
+if [ -e "/Applications/Rocket.Chat.app" ]; then
+  /bin/rm -rf "/Applications/Rocket.Chat.app"
+fi
+exit
+</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.hutr.download.RocketChat</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
 </dict>
 </plist>
