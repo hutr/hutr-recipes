@@ -5,15 +5,15 @@
 	<key>Comment</key>
 	<string>Created with Recipe Robot v1.0.3 (https://github.com/homebysix/recipe-robot)</string>
 	<key>Description</key>
-	<string>Downloads the latest version of Recipe Robot and imports it into Munki.</string>
+	<string>Downloads the latest version of RocketChat.</string>
 	<key>Identifier</key>
-	<string>com.github.hutr.munki.RecipeRobot</string>
+	<string>com.github.hutr.munki.RocketChat</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
-		<string>Recipe Robot</string>
+		<string>RocketChat</string>
 		<key>pkginfo</key>
 		<dict>
 			<key>catalogs</key>
@@ -21,11 +21,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>A kick ass tool for creating AutoPkg recipes.</string>
+			<string>The Ultimate Open Source WebChat Platform.</string>
 			<key>developer</key>
-			<string>Elliot Jordan</string>
+			<string>Rocket.Chat</string>
 			<key>display_name</key>
-			<string>Recipe Robot</string>
+			<string>Rocket.Chat</string>
 			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
@@ -33,9 +33,9 @@
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>0.5.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hutr.download.RecipeRobot</string>
+	<string>com.github.hutr.download.RocketChat</string>
 	<key>Process</key>
 	<array>
 		<dict>

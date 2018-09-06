@@ -11,12 +11,12 @@
 	<key>Input</key>
 	<dict>
 		<key>GITHUB_REPO</key>
-		<string>homebysix/recipe-robot</string>
+		<string>RocketChat/Rocket.Chat.Electron</string>
 		<key>NAME</key>
-		<string>Recipe Robot</string>
+		<string>RocketChat</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>0.5.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
