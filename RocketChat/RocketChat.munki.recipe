@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>RocketChat</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/communication/%NAME%</string>
+        <string>apps/%NAME%</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -19,13 +19,11 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Rocket.Chat+ is a RocketChat app for macOS.</string>
-            <key>category</key>
-            <string>Communication</string>
+            <string>Rocket.Chat is a RocketChat app for macOS.</string>
             <key>developer</key>
             <string>Rocket.Chat</string>
             <key>display_name</key>
-            <string>Rocket.Chat+</string>
+            <string>Rocket.Chat</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>minimum_os_version</key>
