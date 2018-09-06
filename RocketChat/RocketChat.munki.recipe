@@ -27,21 +27,33 @@
 			<key>display_name</key>
 			<string>Rocket.Chat</string>
 			<key>name</key>
+			<key>category</key>
+			<string>VPN</string>
+			<key>name</key>
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
-			<key>preinstall_script</key>
-<string>#!/bin/sh
-if [ -e "/Applications/Rocket.Chat+.app" ]; then
-/bin/rm -rf "/Applications/Rocket.Chat+.app"
-fi
-if [ -e "/Applications/Rocket.Chat.app" ]; then
-/bin/rm -rf "/Applications/Rocket.Chat.app"
-fi
-exit
-</string>
+			<key>uninstall_method</key>
+			<string>removepackages</string>
+			<key>uninstallable</key>
+			<false/>
+			<key>items_to_copy</key>
+			<array/>
+			<key>minimum_os_version</key>
+			<string>10.5.0</string>
+			<key>name</key>
+			<string>Rocket.Chat</string>
+			<key>receipts</key>
+			<array/>
+			<key>update_for</key>
+			<array>
+				<string>Rocket.Chat</string>
+			</array>
+			<true/>
 		</dict>
 	</dict>
+
+
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
