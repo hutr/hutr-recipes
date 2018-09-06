@@ -30,6 +30,16 @@
 			<string>%NAME%</string>
 			<key>unattended_install</key>
 			<true/>
+			<key>preinstall_script</key>
+<string>#!/bin/sh
+if [ -e "/Applications/Rocket.Chat+.app" ]; then
+/bin/rm -rf "/Applications/Rocket.Chat+.app"
+fi
+if [ -e "/Applications/Rocket.Chat.app" ]; then
+/bin/rm -rf "/Applications/Rocket.Chat.app"
+fi
+exit
+</string>
 		</dict>
 	</dict>
 	<key>MinimumVersion</key>
