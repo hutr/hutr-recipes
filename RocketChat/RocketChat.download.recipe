@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Rocket.Chat+</string>
+    <string>Downloads the latest version of Rocket.Chat</string>
     <key>Identifier</key>
     <string>com.github.hutr.download.RocketChat</string>
     <key>Input</key>
