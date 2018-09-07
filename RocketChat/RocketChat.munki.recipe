@@ -31,7 +31,6 @@
       <key>blocking_applications</key>
       <array>
         <string>Rocket.Chat</string>
-        <string>Rocket.Chat+</string>
       </array>
 			<key>unattended_install</key>
 			<true/>
