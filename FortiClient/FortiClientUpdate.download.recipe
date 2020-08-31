@@ -11,7 +11,7 @@
 			<key>NAME</key>
 			<string>FortiClientUpdate</string>
 			<key>DOWNLOAD_URL</key>
-			<string>https://storage.googleapis.com/munki-forticlient/FortiClient.mpkg</string>
+			<string>https://storage.googleapis.com/munki-forticlient/FortiClient-6.4.1.1267.mpkg</string>
 		</dict>
 		<key>MinimumVersion</key>
 		<string>0.2.0</string>
