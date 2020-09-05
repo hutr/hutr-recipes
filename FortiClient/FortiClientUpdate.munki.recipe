@@ -38,7 +38,7 @@
 				<key>items_to_copy</key>
 				<array/>
 				<key>minimum_os_version</key>
-				<string>10.15.0</string>
+				<string>10.5.0</string>
 				<key>name</key>
 				<string>FortiClient</string>
 				<key>receipts</key>
@@ -73,7 +73,7 @@
 								<key>CFBundleShortVersionString</key>
 								<string>6.4.1.1267</string>
 								<key>minosversion</key>
-								<string>10.15</string>
+								<string>10.9</string>
 								<key>path</key>
 								<string>/Applications/FortiClient.app</string>
 								<key>type</key>
